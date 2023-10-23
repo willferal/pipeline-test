@@ -11,7 +11,7 @@ pipeline {
                         extensions: [[$class: 'LocalBranch', localBranch: "**"]],
                         submoduleCfg: [],
                         userRemoteConfigs: [
-                            [credentialsId: 'github-account, url: 'https://github.com/willferal/pipeline-test']
+                            [credentialsId: 'github-account, url: 'github.com/willferal/pipeline-test']
                         ]
                     ])
                 }
