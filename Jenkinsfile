@@ -1,7 +1,7 @@
 pipeline {
     agent docker {
-	api_flask_postgres:1.0.0
-    }
+	api_flask_postgres
+   }
     stages {
         stage("Checkout") {
             steps {
