@@ -26,15 +26,5 @@ pipeline {
 		'''
             }
         }
-        stage('Test') {
-            steps {
-                curl http://localhost:4000/test
-            }
-        }
-        stage('Deploy') {
-            steps {
-                //
-            }
-        }
     }
 }
