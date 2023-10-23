@@ -1,6 +1,21 @@
 pipeline {
     agent any
     stages {
+        stage("Checkout") {
+            steps {
+                    checkout([$class: 'GitSCM',
+                        branches: [
+                            [name: 'main']
+                        ],
+                        doGenerateSubmoduleConfigurations: false,
+                        extensions: [[$class: 'LocalBranch', localBranch: "**"]],
+                        submoduleCfg: [],
+                        userRemoteConfigs: [
+                            [credentialsId: 'github-account, url: 'https://github.com/willferal/pipeline-test']
+                        ]
+                    ])
+                }
+	}
         stage('Build') {
             steps {
                 sh'''
