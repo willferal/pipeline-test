@@ -1,7 +1,7 @@
 pipeline {
     agent{ 
         docker {
-	    api_flask_postgres
+	    image 'api_flask_postgres'
         }
     }
     stages {
